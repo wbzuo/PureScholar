@@ -1,0 +1,11 @@
+name: "Elena Rostova"
+email: "e.rostova@nexus.edu"
+avatar: "https://api.dicebear.com/7.x/notionists/svg?seed=Elena"
+
+tagline:
+  en: "Postdoctoral Researcher @ Global Nexus Univ"
+  zh: "全球互联大学 · 博士后研究员"
+
+bio:
+  en: "My research focuses on **Quantum Computing**, specifically error correction in photonic qubits and scalable quantum networks. I aim to bridge the gap between theoretical quantum mechanics and practical computing architecture."
+  zh: "我的研究主要集中在**量子计算**领域，特别是光子比特的纠错与可扩展量子网络。我致力于在理论量子力学与实用计算架构之间架起桥梁。"

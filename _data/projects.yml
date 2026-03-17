@@ -1,0 +1,13 @@
+- title: "Q-Sim"
+  desc:
+    en: "An open-source, high-performance quantum circuit simulator built with C++ and Python bindings."
+    zh: "一个基于 C++ 和 Python 构建的开源、高性能量子电路模拟器。"
+  link_url: "#"
+  link_text: "GitHub ➔"
+
+- title: "EntangleNet"
+  desc:
+    en: "A protocol framework for routing entangled states in noisy quantum networks."
+    zh: "用于在含噪量子网络中路由纠缠态的协议框架。"
+  link_url: "#"
+  link_text: "Docs ➔"

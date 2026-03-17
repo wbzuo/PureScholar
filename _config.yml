@@ -1,0 +1,21 @@
+# 网站基础信息
+title: Elena Rostova
+email: e.rostova@nexus.edu
+avatar: "https://api.dicebear.com/7.x/notionists/svg?seed=Elena"
+
+# 简介 (支持双语)
+desc_en: Postdoctoral Researcher @ Global Nexus Univ
+desc_zh: 全球互联大学 · 博士后研究员
+
+# ==========================================
+# 核心设置：一键切换四大排版！
+# 可选值: 
+#   1. bento    (便当盒卡片风 - 现代前沿)
+#   2. split    (左右对半分屏风 - 极强视觉冲击)
+#   3. terminal (极客命令行风 - 硬核开发者)
+#   4. notion   (极简文档风 - 沉浸式学术阅读)
+# ==========================================
+theme_layout: bento 
+
+# 排除不需要编译的文件
+exclude: [Gemfile, Gemfile.lock, README.md]

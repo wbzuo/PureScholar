@@ -1,3 +1,10 @@
+既然定名为 **PureScholar**，我们需要一个与之匹配的、高规格的 `README.md`。这个版本在之前的基础上增强了**视觉引导**和**功能描述**，让它看起来更像一个成熟的开源项目。
+
+-----
+
+# 📄 README.md 模板
+
+````markdown
 # 🎓 PureScholar
 
 > **A minimalist, content-first Jekyll theme for researchers and scholars.** > 专为学者设计的极简主义、内容优先的 Jekyll 学术网页模板。
@@ -48,3 +55,40 @@ bundle install
 
 # 启动本地服务器
 bundle exec jekyll serve
+````
+
+访问 `http://localhost:4000` 即可查看。
+
+-----
+
+## 📂 核心配置指南 (Configuration)
+
+在 `_config.yml` 中，你可以轻松配置你的全局信息：
+
+```yaml
+title: Your Name
+email: your-email@univ.edu
+description: >- # 你的简短描述
+  Ph.D. Student at ... | Researching in Embodied AI & LLMs.
+
+# 社交链接
+twitter_username: your_handle
+github_username:  your_github
+google_scholar:   your_id
+```
+
+-----
+
+## 🤝 贡献与反馈
+
+如果你有任何改进建议或发现了 Bug，欢迎提交 **Issue** 或 **Pull Request**。
+
+如果你觉得这个模板对你有帮助，请给一个 **Star ⭐️**，这是对我最大的鼓励！
+
+-----
+
+## 📜 许可证 (License)
+
+本项目采用 [MIT License](https://www.google.com/search?q=LICENSE) 开源。
+
+```

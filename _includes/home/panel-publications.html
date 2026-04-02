@@ -1,0 +1,29 @@
+<section class="home-section" id="publications">
+    {% include components/section-heading.html
+        kicker_en="Publications"
+        kicker_zh="论文"
+        title_en="Full publication archive with topic filters."
+        title_zh="带主题筛选的完整论文档案。"
+        lead_en="Once the selected work is clear, the full list becomes easy to browse."
+        lead_zh="在代表成果明确之后，完整论文列表就更容易被快速浏览。"
+    %}
+
+    <div class="panel-stack">
+        <div class="filter-set" data-filter-scope>
+            <div class="filter-bar" role="toolbar" aria-label="Publication topics">
+                {% for item in site.data.navigation.publication_filters %}
+                <button type="button" class="filter-button" data-filter-value="{{ item.id }}" aria-pressed="false">
+                    <span class="lang-inline lang-en">{{ item.label_en }}</span>
+                    <span class="lang-inline lang-zh">{{ item.label_zh }}</span>
+                </button>
+                {% endfor %}
+            </div>
+
+            <div class="publication-grid">
+                {% for pub in site.data.publications %}
+                {% include components/publication-card.html publication=pub filterable=true %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

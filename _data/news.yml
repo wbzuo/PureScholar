@@ -1,9 +1,20 @@
 - date: "2026.03"
+  label_en: "Paper"
+  label_zh: "论文"
   content:
-    en: "Our paper on Scalable Error Correction was accepted by *Nature Quantum*! 🎉"
-    zh: "我们关于可扩展纠错的论文被 *Nature Quantum* 接收！🎉"
+    en: "Our paper on scalable error correction for photonic qubit fabrics was accepted by *Nature Quantum*."
+    zh: "我们关于光子比特阵列可扩展纠错的论文已被 *Nature Quantum* 接收。"
 
 - date: "2025.11"
+  label_en: "Appointment"
+  label_zh: "任职"
   content:
-    en: "Joined Global Nexus University as a Postdoctoral Researcher."
-    zh: "正式加入全球互联大学担任博士后研究员。"
+    en: "Joined Global Nexus University as a Postdoctoral Researcher in quantum systems engineering."
+    zh: "加入全球互联大学，担任量子系统工程方向博士后研究员。"
+
+- date: "2025.07"
+  label_en: "Release"
+  label_zh: "发布"
+  content:
+    en: "Released the first internal benchmark version of PhotonBench for cross-lab evaluation."
+    zh: "发布 PhotonBench 首个内部基准版本，用于跨实验室评测。"

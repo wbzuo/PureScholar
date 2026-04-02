@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<article class="page-panel">
+    {% include components/section-heading.html
+        kicker_en=page.eyebrow_en
+        kicker_zh=page.eyebrow_zh
+        title_en=page.title
+        title_zh=page.title_zh
+        lead_en=page.summary_en
+        lead_zh=page.summary_zh
+        compact=true
+    %}
+
+    <div class="page-content">
+        {{ content }}
+    </div>
+</article>

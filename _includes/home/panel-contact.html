@@ -1,0 +1,38 @@
+<section class="home-section" id="contact">
+    {% include components/section-heading.html
+        kicker_en="Contact"
+        kicker_zh="联系"
+        title_en="Clear, low-friction paths for academic contact."
+        title_zh="为学术联系保留清晰、低摩擦的入口。"
+        lead_en="The strongest personal sites keep one obvious way to start a conversation."
+        lead_zh="高质量个人主页通常都会保留一个足够直接的联系入口。"
+    %}
+
+    <div class="contact-grid">
+        <article class="card-panel contact-panel contact-panel-primary">
+            <p class="section-mini-label lang-en">For collaboration</p>
+            <p class="section-mini-label lang-zh">合作联系</p>
+            <p class="lang-en">For research collaboration, invited seminars, or conversation related to quantum computing, photonic error correction, and quantum networking, email is the fastest path.</p>
+            <p class="lang-zh">如果你希望围绕量子计算、光子纠错或量子网络展开学术合作、邀请报告或进一步交流，邮件是最直接的方式。</p>
+
+            <a href="mailto:{{ site.data.profile.email }}" class="primary-link">
+                <span class="lang-inline lang-en">Write to {{ site.data.profile.name }}</span>
+                <span class="lang-inline lang-zh">写信联系 {{ site.data.profile.name }}</span>
+            </a>
+        </article>
+
+        <article class="card-panel contact-panel">
+            <p class="section-mini-label lang-en">External profiles</p>
+            <p class="section-mini-label lang-zh">外部主页</p>
+
+            <div class="link-list">
+                {% for link in site.data.profile.links %}
+                <a href="{{ link.url }}" class="inline-link-pill">
+                    <span class="lang-inline lang-en">{{ link.label_en }}</span>
+                    <span class="lang-inline lang-zh">{{ link.label_zh }}</span>
+                </a>
+                {% endfor %}
+            </div>
+        </article>
+    </div>
+</section>

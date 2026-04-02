@@ -1,0 +1,17 @@
+- id: academic
+  label_en: "Academic"
+  label_zh: "学术"
+  description_en: "Journal-inspired balance, soft paper surfaces, and classic hierarchy."
+  description_zh: "期刊式层次、柔和纸面质感，以及经典学术排版。"
+
+- id: lab
+  label_en: "Lab"
+  label_zh: "实验室"
+  description_en: "Sharper contrast, system-style panels, and a more technical tone."
+  description_zh: "更强对比、更系统化的面板语言，以及更偏技术感的视觉。"
+
+- id: editorial
+  label_en: "Editorial"
+  label_zh: "专栏"
+  description_en: "Warm magazine-inspired storytelling for narrative-heavy profiles."
+  description_zh: "更温暖的专栏式叙事风格，适合强调研究故事与表达。"

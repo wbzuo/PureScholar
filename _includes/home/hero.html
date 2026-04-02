@@ -1,0 +1,99 @@
+<section class="hero-section" id="highlights">
+    <div class="hero-grid">
+        <div class="card-panel hero-copy-panel">
+            <p class="section-kicker lang-en">Research Portfolio</p>
+            <p class="section-kicker lang-zh">学术主页</p>
+
+            <h1 class="hero-title">
+                <span class="lang-en">{{ site.data.profile.headline.en }}</span>
+                <span class="lang-zh">{{ site.data.profile.headline.zh }}</span>
+            </h1>
+
+            <div class="hero-intro lang-en">{{ site.data.profile.intro.en | markdownify }}</div>
+            <div class="hero-intro lang-zh">{{ site.data.profile.intro.zh | markdownify }}</div>
+
+            <div class="hero-actions">
+                <a href="mailto:{{ site.data.profile.email }}" class="primary-link">
+                    <span class="lang-inline lang-en">Contact for collaboration</span>
+                    <span class="lang-inline lang-zh">联系合作</span>
+                </a>
+
+                {% for link in site.data.profile.links limit: 2 %}
+                <a href="{{ link.url }}" class="secondary-link">
+                    <span class="lang-inline lang-en">{{ link.label_en }}</span>
+                    <span class="lang-inline lang-zh">{{ link.label_zh }}</span>
+                </a>
+                {% endfor %}
+            </div>
+
+            <div class="hero-metrics">
+                {% for metric in site.data.profile.metrics %}
+                <article class="metric-card">
+                    <p class="metric-value">{{ metric.value }}</p>
+                    <p class="metric-label lang-en">{{ metric.label_en }}</p>
+                    <p class="metric-label lang-zh">{{ metric.label_zh }}</p>
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+
+        <aside class="card-panel hero-profile-panel">
+            <div class="hero-profile-head">
+                <img src="{{ site.data.profile.avatar }}" alt="{{ site.data.profile.name }}" class="hero-avatar">
+
+                <div class="hero-profile-copy">
+                    <p class="hero-name">{{ site.data.profile.name }}</p>
+                    <p class="hero-role lang-en">{{ site.data.profile.tagline.en }}</p>
+                    <p class="hero-role lang-zh">{{ site.data.profile.tagline.zh }}</p>
+                </div>
+            </div>
+
+            <div class="hero-meta-list">
+                <div class="hero-meta-item">
+                    <span class="meta-label">
+                        <span class="lang-inline lang-en">Location</span>
+                        <span class="lang-inline lang-zh">地点</span>
+                    </span>
+                    <p class="lang-en">{{ site.data.profile.location.en }}</p>
+                    <p class="lang-zh">{{ site.data.profile.location.zh }}</p>
+                </div>
+
+                <div class="hero-meta-item">
+                    <span class="meta-label">
+                        <span class="lang-inline lang-en">Current focus</span>
+                        <span class="lang-inline lang-zh">当前重点</span>
+                    </span>
+                    <p class="lang-en">{{ site.data.profile.status.en }}</p>
+                    <p class="lang-zh">{{ site.data.profile.status.zh }}</p>
+                </div>
+            </div>
+
+            <div class="hero-focus">
+                {% for item in site.data.profile.focus_areas %}
+                <span class="topic-chip lang-en">{{ item.en }}</span>
+                <span class="topic-chip lang-zh">{{ item.zh }}</span>
+                {% endfor %}
+            </div>
+
+            <div class="hero-link-cluster">
+                {% for link in site.data.profile.links %}
+                <a href="{{ link.url }}" class="inline-link-pill">
+                    <span class="lang-inline lang-en">{{ link.label_en }}</span>
+                    <span class="lang-inline lang-zh">{{ link.label_zh }}</span>
+                </a>
+                {% endfor %}
+            </div>
+        </aside>
+    </div>
+
+    <div class="insight-grid">
+        {% for point in site.data.profile.priority_points %}
+        <article class="card-panel insight-card">
+            <p class="priority-label lang-en">{{ point.title_en }}</p>
+            <p class="priority-label lang-zh">{{ point.title_zh }}</p>
+            <p class="priority-copy lang-en">{{ point.text_en }}</p>
+            <p class="priority-copy lang-zh">{{ point.text_zh }}</p>
+        </article>
+        {% endfor %}
+    </div>
+</section>

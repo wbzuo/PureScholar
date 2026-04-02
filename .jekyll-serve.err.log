@@ -1,0 +1,13 @@
+#<Thread:0x000001dae4bc0be0 C:/Ruby40-x64/lib/ruby/gems/4.0.0/gems/jekyll-4.4.1/lib/jekyll/commands/serve.rb:289 run> terminated with exception (report_on_exception is true):
+C:/Ruby40-x64/lib/ruby/gems/4.0.0/gems/webrick-1.9.2/lib/webrick/server.rb:338:in 'IO.pipe': Permission denied (Errno::EACCES)
+	from C:/Ruby40-x64/lib/ruby/gems/4.0.0/gems/webrick-1.9.2/lib/webrick/server.rb:338:in 'WEBrick::GenericServer#setup_shutdown_pipe'
+	from C:/Ruby40-x64/lib/ruby/gems/4.0.0/gems/webrick-1.9.2/lib/webrick/server.rb:158:in 'WEBrick::GenericServer#start'
+	from C:/Ruby40-x64/lib/ruby/gems/4.0.0/gems/jekyll-4.4.1/lib/jekyll/commands/serve.rb:289:in 'block in Jekyll::Commands::Serve.boot_or_detach'
+[31m                    ------------------------------------------------[0m
+[31m      Jekyll 4.4.1   Please append `--trace` to the `serve` command [0m
+[31m                     for any additional information or backtrace. [0m
+[31m                    ------------------------------------------------[0m
+C:/Ruby40-x64/lib/ruby/gems/4.0.0/gems/webrick-1.9.2/lib/webrick/server.rb:338:in 'IO.pipe': Permission denied (Errno::EACCES)
+	from C:/Ruby40-x64/lib/ruby/gems/4.0.0/gems/webrick-1.9.2/lib/webrick/server.rb:338:in 'WEBrick::GenericServer#setup_shutdown_pipe'
+	from C:/Ruby40-x64/lib/ruby/gems/4.0.0/gems/webrick-1.9.2/lib/webrick/server.rb:158:in 'WEBrick::GenericServer#start'
+	from C:/Ruby40-x64/lib/ruby/gems/4.0.0/gems/jekyll-4.4.1/lib/jekyll/commands/serve.rb:289:in 'block in Jekyll::Commands::Serve.boot_or_detach'

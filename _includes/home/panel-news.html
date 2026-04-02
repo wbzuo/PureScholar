@@ -1,0 +1,44 @@
+<section class="home-section" id="news">
+    {% include components/section-heading.html
+        kicker_en="News"
+        kicker_zh="动态"
+        title_en="Recent updates remain visible on the homepage."
+        title_zh="近期动态直接保留在首页。"
+        lead_en="Another common pattern in strong academic sites: the latest activity is present without becoming the whole page."
+        lead_zh="这也是优秀学术主页的常见特征：近期活动可见，但不会喧宾夺主。"
+    %}
+
+    <div class="news-grid">
+        <div class="timeline-list">
+            {% for item in site.data.news %}
+            <article class="card-panel timeline-item">
+                <div class="timeline-date">{{ item.date }}</div>
+                <div class="timeline-copy">
+                    <span class="timeline-label lang-en">{{ item.label_en }}</span>
+                    <span class="timeline-label lang-zh">{{ item.label_zh }}</span>
+                    <div class="lang-en">{{ item.content.en | markdownify }}</div>
+                    <div class="lang-zh">{{ item.content.zh | markdownify }}</div>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+
+        <aside class="news-aside">
+            <article class="card-panel news-note">
+                <p class="section-mini-label lang-en">Collaboration status</p>
+                <p class="section-mini-label lang-zh">合作状态</p>
+                <p class="lang-en">{{ site.data.profile.status.en }}</p>
+                <p class="lang-zh">{{ site.data.profile.status.zh }}</p>
+            </article>
+
+            <article class="card-panel news-note">
+                <p class="section-mini-label lang-en">Preferred contact</p>
+                <p class="section-mini-label lang-zh">推荐联系方式</p>
+                <a href="mailto:{{ site.data.profile.email }}" class="primary-link">
+                    <span class="lang-inline lang-en">Email {{ site.data.profile.name }}</span>
+                    <span class="lang-inline lang-zh">发送邮件联系 {{ site.data.profile.name }}</span>
+                </a>
+            </article>
+        </aside>
+    </div>
+</section>

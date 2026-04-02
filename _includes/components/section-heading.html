@@ -1,0 +1,22 @@
+<header class="section-heading{% if include.compact %} section-heading-compact{% endif %}">
+    <div class="section-heading-main">
+        {% if include.kicker_en or include.kicker_zh %}
+        <p class="section-kicker lang-en">{{ include.kicker_en }}</p>
+        <p class="section-kicker lang-zh">{{ include.kicker_zh }}</p>
+        {% endif %}
+
+        <h2 class="section-title">
+            <span class="lang-en">{{ include.title_en }}</span>
+            {% if include.title_zh %}
+            <span class="lang-zh">{{ include.title_zh }}</span>
+            {% endif %}
+        </h2>
+    </div>
+
+    {% if include.lead_en or include.lead_zh %}
+    <div class="section-lead">
+        <p class="lang-en">{{ include.lead_en }}</p>
+        <p class="lang-zh">{{ include.lead_zh }}</p>
+    </div>
+    {% endif %}
+</header>

@@ -1,13 +1,56 @@
 - title: "Q-Sim"
+  year: "2026"
+  status:
+    en: "Open source"
+    zh: "开源中"
   desc:
-    en: "An open-source, high-performance quantum circuit simulator built with C++ and Python bindings."
-    zh: "一个基于 C++ 和 Python 构建的开源、高性能量子电路模拟器。"
+    en: "A high-performance quantum circuit simulator with C++ kernels, Python bindings, and reproducible benchmarking workflows for photonic experiments."
+    zh: "一个面向光子实验的高性能量子电路模拟器，包含 C++ 内核、Python 绑定与可复现实验基准流程。"
+  tags:
+    - "C++"
+    - "Python"
+    - "Simulation"
+  topics:
+    - "simulation"
+    - "tooling"
   link_url: "#"
-  link_text: "GitHub ➔"
+  link_text_en: "Repository"
+  link_text_zh: "仓库"
 
 - title: "EntangleNet"
+  year: "2025"
+  status:
+    en: "In deployment"
+    zh: "部署中"
   desc:
-    en: "A protocol framework for routing entangled states in noisy quantum networks."
-    zh: "用于在含噪量子网络中路由纠缠态的协议框架。"
+    en: "A protocol framework for routing entangled states in noisy quantum networks and evaluating recovery under constrained link budgets."
+    zh: "一个用于在含噪量子网络中路由纠缠态并评估受限链路预算下恢复能力的协议框架。"
+  tags:
+    - "Networking"
+    - "Routing"
+    - "Protocols"
+  topics:
+    - "networking"
+    - "tooling"
   link_url: "#"
-  link_text: "Docs ➔"
+  link_text_en: "Documentation"
+  link_text_zh: "文档"
+
+- title: "PhotonBench"
+  year: "2024"
+  status:
+    en: "Benchmark suite"
+    zh: "基准套件"
+  desc:
+    en: "A reproducible benchmark harness for comparing photonic qubit control stacks across hardware conditions, operator settings, and calibration schedules."
+    zh: "一套可复现的基准测试框架，用于比较不同硬件条件、操作设置和校准周期下的光子比特控制栈。"
+  tags:
+    - "Benchmarking"
+    - "Reproducibility"
+    - "Lab Ops"
+  topics:
+    - "simulation"
+    - "tooling"
+  link_url: "#"
+  link_text_en: "Project Notes"
+  link_text_zh: "项目说明"

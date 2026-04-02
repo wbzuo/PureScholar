@@ -1,0 +1,48 @@
+<section class="home-section explorer-section" id="explore" data-tab-system>
+    {% include components/section-heading.html
+        kicker_en="Research Archive"
+        kicker_zh="研究档案"
+        title_en="Browse the site through focused tabs."
+        title_zh="通过分区标签浏览网站内容。"
+        lead_en="The multi-tab structure keeps major academic content visible without forcing everything into one continuous column."
+        lead_zh="多标签结构让论文、项目、动态和联系信息各自突出，而不是被压在一条连续长页中。"
+    %}
+
+    <div class="tab-strip" role="tablist" aria-label="Home sections">
+        {% for tab in site.data.navigation.home_tabs %}
+        <button
+            type="button"
+            class="tab-button"
+            id="tab-trigger-{{ tab.id }}"
+            data-tab-trigger="{{ tab.id }}"
+            role="tab"
+            aria-controls="{{ tab.id }}"
+            aria-selected="false">
+            <span class="lang-inline lang-en">{{ tab.label_en }}</span>
+            <span class="lang-inline lang-zh">{{ tab.label_zh }}</span>
+        </button>
+        {% endfor %}
+    </div>
+
+    <div class="tab-panels">
+        <section class="tab-panel" id="overview" data-tab-panel role="tabpanel" aria-labelledby="tab-trigger-overview">
+            {% include home/panel-overview.html %}
+        </section>
+
+        <section class="tab-panel" id="publications" data-tab-panel role="tabpanel" aria-labelledby="tab-trigger-publications" hidden>
+            {% include home/panel-publications.html %}
+        </section>
+
+        <section class="tab-panel" id="projects" data-tab-panel role="tabpanel" aria-labelledby="tab-trigger-projects" hidden>
+            {% include home/panel-projects.html %}
+        </section>
+
+        <section class="tab-panel" id="news" data-tab-panel role="tabpanel" aria-labelledby="tab-trigger-news" hidden>
+            {% include home/panel-news.html %}
+        </section>
+
+        <section class="tab-panel" id="contact" data-tab-panel role="tabpanel" aria-labelledby="tab-trigger-contact" hidden>
+            {% include home/panel-contact.html %}
+        </section>
+    </div>
+</section>

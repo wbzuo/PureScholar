@@ -1,0 +1,48 @@
+<section class="home-section" id="projects">
+    {% include components/section-heading.html
+        kicker_en="Projects"
+        kicker_zh="项目"
+        title_en="Research software, benchmarks, and supporting systems."
+        title_zh="科研软件、基准工具与支撑系统。"
+        lead_en="Inspired by portfolio-style academic pages, but framed around research infrastructure instead of startup language."
+        lead_zh="借鉴高质量 portfolio 型学术主页的展示方式，但项目表述保持科研基础设施语境。"
+    %}
+
+    <div class="filter-set" data-filter-scope>
+        <div class="filter-bar" role="toolbar" aria-label="Project topics">
+            {% for item in site.data.navigation.project_filters %}
+            <button type="button" class="filter-button" data-filter-value="{{ item.id }}" aria-pressed="false">
+                <span class="lang-inline lang-en">{{ item.label_en }}</span>
+                <span class="lang-inline lang-zh">{{ item.label_zh }}</span>
+            </button>
+            {% endfor %}
+        </div>
+
+        <div class="project-grid">
+            {% for project in site.data.projects %}
+            <article class="card-panel project-entry" data-filter-item data-tags="{{ project.topics | join: ' ' }}">
+                <div class="entry-head">
+                    <span class="paper-year">{{ project.year }}</span>
+                    <span class="project-status lang-en">{{ project.status.en }}</span>
+                    <span class="project-status lang-zh">{{ project.status.zh }}</span>
+                </div>
+
+                <h3>{{ project.title }}</h3>
+                <p class="lang-en">{{ project.desc.en }}</p>
+                <p class="lang-zh">{{ project.desc.zh }}</p>
+
+                <div class="tag-cloud">
+                    {% for tag in project.tags %}
+                    <span class="topic-chip">{{ tag }}</span>
+                    {% endfor %}
+                </div>
+
+                <a href="{{ project.link_url }}" class="text-link">
+                    <span class="lang-inline lang-en">{{ project.link_text_en }}</span>
+                    <span class="lang-inline lang-zh">{{ project.link_text_zh }}</span>
+                </a>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>

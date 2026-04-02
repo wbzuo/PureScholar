@@ -1,0 +1,48 @@
+{% assign featured_publications = site.data.publications | where: "featured", true %}
+<section class="home-section" id="selected">
+    {% include components/section-heading.html
+        kicker_en="Selected Work"
+        kicker_zh="代表成果"
+        title_en="Lead publications come first, with supporting papers close behind."
+        title_zh="优先展示代表论文，其后是相关支撑成果。"
+        lead_en="This follows the pattern common in top academic homepage templates: visitors should understand your strongest work before scanning the full archive."
+        lead_zh="这也是高质量学术主页常见的做法：访问者应先看见你最重要的工作，再进入完整论文列表。"
+    %}
+
+    <div class="feature-grid">
+        {% for pub in featured_publications limit: 1 %}
+        <article class="card-panel spotlight-paper">
+            <div class="spotlight-meta">
+                <span class="paper-year">{{ pub.year }}</span>
+                <div class="tag-cloud">
+                    {% for tag in pub.tags %}
+                    <span class="topic-chip">{{ tag }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <h3>{{ pub.title }}</h3>
+            <div class="paper-authors">{{ pub.authors | markdownify }}</div>
+            <p class="paper-venue lang-en">{{ pub.venue.en }}</p>
+            <p class="paper-venue lang-zh">{{ pub.venue.zh }}</p>
+            <div class="paper-summary lang-en">{{ pub.summary.en | markdownify }}</div>
+            <div class="paper-summary lang-zh">{{ pub.summary.zh | markdownify }}</div>
+
+            <div class="paper-links">
+                {% for link in pub.links %}
+                <a href="{{ link.url }}">
+                    <span class="lang-inline lang-en">{{ link.text_en }}</span>
+                    <span class="lang-inline lang-zh">{{ link.text_zh }}</span>
+                </a>
+                {% endfor %}
+            </div>
+        </article>
+        {% endfor %}
+
+        <div class="supporting-papers">
+            {% for pub in featured_publications offset: 1 %}
+            {% include components/publication-card.html publication=pub variant="featured" %}
+            {% endfor %}
+        </div>
+    </div>
+</section>

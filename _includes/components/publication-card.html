@@ -1,0 +1,32 @@
+{% assign publication = include.publication %}
+{% assign article_class = "pub-entry" %}
+{% if include.variant == "featured" %}
+    {% assign article_class = "featured-paper" %}
+{% endif %}
+
+<article class="{{ article_class }}"{% if include.filterable %} data-filter-item data-tags="{{ publication.topics | join: ' ' }}"{% endif %}>
+    <div class="entry-head">
+        <span class="paper-year">{{ publication.year }}</span>
+        <div class="tag-cloud">
+            {% for tag in publication.tags %}
+            <span class="topic-chip">{{ tag }}</span>
+            {% endfor %}
+        </div>
+    </div>
+
+    <h3>{{ publication.title }}</h3>
+    <div class="paper-authors">{{ publication.authors | markdownify }}</div>
+    <p class="paper-venue lang-en">{{ publication.venue.en }}</p>
+    <p class="paper-venue lang-zh">{{ publication.venue.zh }}</p>
+    <div class="paper-summary lang-en">{{ publication.summary.en | markdownify }}</div>
+    <div class="paper-summary lang-zh">{{ publication.summary.zh | markdownify }}</div>
+
+    <div class="paper-links">
+        {% for link in publication.links %}
+        <a href="{{ link.url }}">
+            <span class="lang-inline lang-en">{{ link.text_en }}</span>
+            <span class="lang-inline lang-zh">{{ link.text_zh }}</span>
+        </a>
+        {% endfor %}
+    </div>
+</article>

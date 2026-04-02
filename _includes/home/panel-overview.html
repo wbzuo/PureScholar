@@ -1,0 +1,47 @@
+<section class="home-section" id="overview">
+    {% include components/section-heading.html
+        kicker_en="Overview"
+        kicker_zh="概览"
+        title_en="A research homepage shaped like a strong academic profile."
+        title_zh="按高质量学术主页逻辑组织的研究首页。"
+        lead_en="Inspired by the structure used in high-star academic homepages: concise identity, clear research statement, and fast access to publications, projects, and contact."
+        lead_zh="参考高星学术主页常见结构：身份信息简洁明确，研究陈述清晰，论文、项目与联系入口一眼可见。"
+    %}
+
+    <div class="research-grid">
+        <article class="card-panel research-essay">
+            <p class="section-mini-label lang-en">Research statement</p>
+            <p class="section-mini-label lang-zh">研究陈述</p>
+            <div class="rich-text lang-en">{{ site.data.profile.bio.en | markdownify }}</div>
+            <div class="rich-text lang-zh">{{ site.data.profile.bio.zh | markdownify }}</div>
+        </article>
+
+        <aside class="research-sidebar">
+            <article class="card-panel research-sidecard">
+                <p class="section-mini-label lang-en">Working themes</p>
+                <p class="section-mini-label lang-zh">核心主题</p>
+                <div class="topic-list">
+                    {% for item in site.data.profile.focus_areas %}
+                    <span class="topic-chip lang-en">{{ item.en }}</span>
+                    <span class="topic-chip lang-zh">{{ item.zh }}</span>
+                    {% endfor %}
+                </div>
+            </article>
+
+            <article class="card-panel research-sidecard">
+                <p class="section-mini-label lang-en">How this site is organized</p>
+                <p class="section-mini-label lang-zh">页面组织方式</p>
+                <ul class="focus-list lang-en">
+                    <li>Selected work appears before the full archive.</li>
+                    <li>Projects are presented as research infrastructure, not product cards.</li>
+                    <li>News and contact remain visible without digging through tabs.</li>
+                </ul>
+                <ul class="focus-list lang-zh">
+                    <li>代表性成果优先于完整档案展示。</li>
+                    <li>项目作为科研基础设施呈现，而不是普通产品卡片。</li>
+                    <li>动态与联系信息保持直接可见，不再埋在标签页里。</li>
+                </ul>
+            </article>
+        </aside>
+    </div>
+</section>

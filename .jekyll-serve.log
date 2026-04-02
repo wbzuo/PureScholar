@@ -1,0 +1,9 @@
+Configuration file: D:/Projects/github/PureScholar/_config.yml
+            Source: D:/Projects/github/PureScholar
+       Destination: D:/Projects/github/PureScholar/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+       Jekyll Feed: Generating feed for posts
+                    done in 0.722 seconds.
+ Auto-regeneration: enabled for 'D:/Projects/github/PureScholar'
+    Server address: http://127.0.0.1:4000

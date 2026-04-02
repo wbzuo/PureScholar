@@ -1,0 +1,71 @@
+- year: "2026"
+  featured: true
+  title: "Scalable Error Correction for Photonic Qubit Fabrics"
+  authors: "**Elena Rostova**, Amir Solberg, Naoko Ito"
+  venue:
+    en: "Nature Quantum, 2026"
+    zh: "Nature Quantum，2026"
+  summary:
+    en: "Introduces a fault-tolerant correction pipeline that stabilizes photonic qubit fabrics under routing noise, calibration drift, and hardware variability."
+    zh: "提出一套在路由噪声、校准漂移和硬件波动条件下稳定光子比特阵列的容错纠错流程。"
+  tags:
+    - "Error Correction"
+    - "Quantum Networks"
+  topics:
+    - "error-correction"
+    - "networking"
+  links:
+    - text_en: "Paper"
+      text_zh: "论文"
+      url: "#"
+    - text_en: "Code"
+      text_zh: "代码"
+      url: "#"
+
+- year: "2025"
+  featured: true
+  title: "EntangleNet: Routing Strategies for Noisy Quantum Networks"
+  authors: "**Elena Rostova**, Mateusz Zielinski, Clara Benham"
+  venue:
+    en: "Proceedings of QNetSys 2025"
+    zh: "QNetSys 2025 会议论文"
+  summary:
+    en: "Develops routing heuristics that balance path fidelity, queue pressure, and recovery time in distributed entanglement networks."
+    zh: "提出在分布式纠缠网络中综合平衡路径保真度、队列压力与恢复时间的路由启发式策略。"
+  tags:
+    - "Quantum Networks"
+    - "Routing"
+  topics:
+    - "networking"
+    - "tooling"
+  links:
+    - text_en: "Paper"
+      text_zh: "论文"
+      url: "#"
+    - text_en: "Slides"
+      text_zh: "讲稿"
+      url: "#"
+
+- year: "2024"
+  featured: false
+  title: "PhotonBench: Reproducible Evaluation for Quantum Control Toolchains"
+  authors: "**Elena Rostova**, Daniel Hsu, Leila Sato"
+  venue:
+    en: "Journal of Quantum Systems Engineering, 2024"
+    zh: "《量子系统工程学报》，2024"
+  summary:
+    en: "Defines a benchmark protocol and reporting format that help experimental teams compare quantum control stacks with less hidden variance."
+    zh: "定义了一套基准协议与报告格式，帮助实验团队在更少隐含变量的条件下比较量子控制栈表现。"
+  tags:
+    - "Benchmarking"
+    - "Tooling"
+  topics:
+    - "tooling"
+    - "error-correction"
+  links:
+    - text_en: "Paper"
+      text_zh: "论文"
+      url: "#"
+    - text_en: "Benchmark Kit"
+      text_zh: "基准套件"
+      url: "#"

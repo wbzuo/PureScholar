@@ -2,10 +2,79 @@ name: "Elena Rostova"
 email: "e.rostova@nexus.edu"
 avatar: "https://api.dicebear.com/7.x/notionists/svg?seed=Elena"
 
+location:
+  en: "Shanghai / Global Collaborations"
+  zh: "上海 / 全球协作"
+
+affiliation:
+  en: "Postdoctoral Researcher, Global Nexus University"
+  zh: "全球互联大学博士后研究员"
+
+headline:
+  en: "Scalable quantum computing, photonic error correction, and networked quantum systems."
+  zh: "聚焦可扩展量子计算、光子纠错与网络化量子系统。"
+
 tagline:
-  en: "Postdoctoral Researcher @ Global Nexus Univ"
-  zh: "全球互联大学 · 博士后研究员"
+  en: "Postdoctoral research in quantum computing, photonic error correction, and quantum networking."
+  zh: "博士后研究方向包括量子计算、光子纠错与量子网络。"
+
+intro:
+  en: "My work focuses on scalable quantum computing systems, with particular interest in photonic error correction, distributed entanglement, and the evaluation infrastructure required for reproducible experimental research."
+  zh: "我的研究主要关注可扩展量子计算系统，尤其是光子纠错、分布式纠缠，以及支撑可复现实验研究所需的评测基础设施。"
 
 bio:
-  en: "My research focuses on **Quantum Computing**, specifically error correction in photonic qubits and scalable quantum networks. I aim to bridge the gap between theoretical quantum mechanics and practical computing architecture."
-  zh: "我的研究主要集中在**量子计算**领域，特别是光子比特的纠错与可扩展量子网络。我致力于在理论量子力学与实用计算架构之间架起桥梁。"
+  en: "My research sits at the intersection of **quantum computing**, **network systems**, and **research tooling**. I work on the point where theory becomes deployable infrastructure: not only whether a method is correct in principle, but whether it can be reproduced, benchmarked, and extended by other groups.\n\nThis site is structured to foreground the material that usually matters most on an academic homepage: research themes, selected publications, software projects, recent updates, and direct paths for contact."
+  zh: "我的研究位于**量子计算**、**网络系统**和**科研工具链**的交叉处。我关注的是理论走向可部署基础设施的过程，不仅关心方法在原理上是否成立，也关心它能否被复现、被系统评测，并被其他研究团队继续扩展。\n\n这个主页的结构也围绕学术网站最重要的信息展开：研究主题、代表性论文、科研项目、近期动态，以及清晰的联系入口。"
+
+status:
+  en: "Open to academic collaboration on quantum networking, error correction benchmarks, and research infrastructure."
+  zh: "欢迎围绕量子网络、纠错基准与科研基础设施开展学术合作。"
+
+focus_areas:
+  - en: "Photonic error correction"
+    zh: "光子纠错"
+  - en: "Distributed entanglement routing"
+    zh: "分布式纠缠路由"
+  - en: "Simulation and evaluation tooling"
+    zh: "仿真与评测工具链"
+  - en: "Reproducible experiment design"
+    zh: "可复现实验设计"
+
+priority_points:
+  - title_en: "Current agenda"
+    title_zh: "当前议题"
+    text_en: "Fault-tolerant control strategies for photonic qubit fabrics under realistic system noise."
+    text_zh: "研究真实系统噪声条件下光子比特阵列的容错控制策略。"
+  - title_en: "Methodological focus"
+    title_zh: "方法重点"
+    text_en: "Benchmarking, simulation, and evaluation workflows that make experimental claims more reproducible."
+    text_zh: "关注让实验结论更可复现的基准测试、仿真与评测流程。"
+  - title_en: "Collaboration"
+    title_zh: "合作方向"
+    text_en: "Interested in joint work on quantum networking systems, research software, and cross-lab infrastructure."
+    text_zh: "欢迎围绕量子网络系统、科研软件与跨实验室基础设施开展合作。"
+
+metrics:
+  - value: "12"
+    label_en: "peer-reviewed publications"
+    label_zh: "篇同行评审成果"
+  - value: "04"
+    label_en: "ongoing international collaborations"
+    label_zh: "项国际合作"
+  - value: "02"
+    label_en: "open-source research toolchains"
+    label_zh: "套开源科研工具链"
+
+links:
+  - label_en: "Email"
+    label_zh: "邮箱"
+    url: "mailto:e.rostova@nexus.edu"
+  - label_en: "GitHub"
+    label_zh: "代码"
+    url: "#"
+  - label_en: "Scholar"
+    label_zh: "学术"
+    url: "#"
+  - label_en: "CV"
+    label_zh: "简历"
+    url: "#"

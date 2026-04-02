@@ -1,0 +1,64 @@
+sidebar_nav:
+  - target: highlights
+    label_en: "Highlights"
+    label_zh: "重点"
+  - target: overview
+    label_en: "Overview"
+    label_zh: "概览"
+  - target: publications
+    label_en: "Publications"
+    label_zh: "论文"
+  - target: projects
+    label_en: "Projects"
+    label_zh: "项目"
+  - target: news
+    label_en: "News"
+    label_zh: "动态"
+  - target: contact
+    label_en: "Contact"
+    label_zh: "联系"
+
+home_tabs:
+  - id: overview
+    label_en: "Overview"
+    label_zh: "概览"
+  - id: publications
+    label_en: "Publications"
+    label_zh: "论文"
+  - id: projects
+    label_en: "Projects"
+    label_zh: "项目"
+  - id: news
+    label_en: "News"
+    label_zh: "动态"
+  - id: contact
+    label_en: "Contact"
+    label_zh: "联系"
+
+publication_filters:
+  - id: all
+    label_en: "All"
+    label_zh: "全部"
+  - id: error-correction
+    label_en: "Error Correction"
+    label_zh: "纠错"
+  - id: networking
+    label_en: "Quantum Networks"
+    label_zh: "量子网络"
+  - id: tooling
+    label_en: "Tooling"
+    label_zh: "工具链"
+
+project_filters:
+  - id: all
+    label_en: "All"
+    label_zh: "全部"
+  - id: simulation
+    label_en: "Simulation"
+    label_zh: "仿真"
+  - id: networking
+    label_en: "Networking"
+    label_zh: "网络"
+  - id: tooling
+    label_en: "Infrastructure"
+    label_zh: "基础设施"

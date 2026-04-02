@@ -1,0 +1,73 @@
+<div class="sidebar-card">
+    <div class="sidebar-header">
+        <img src="{{ site.data.profile.avatar }}" alt="{{ site.data.profile.name }}" class="sidebar-avatar">
+
+        <div class="sidebar-title-group">
+            <p class="sidebar-eyebrow lang-en">{{ site.data.profile.affiliation.en }}</p>
+            <p class="sidebar-eyebrow lang-zh">{{ site.data.profile.affiliation.zh }}</p>
+            <h1>{{ site.data.profile.name }}</h1>
+            <p class="sidebar-tagline lang-en">{{ site.data.profile.tagline.en }}</p>
+            <p class="sidebar-tagline lang-zh">{{ site.data.profile.tagline.zh }}</p>
+        </div>
+    </div>
+
+    <div class="sidebar-meta">
+        <div class="meta-row">
+            <span class="meta-label">
+                <span class="lang-inline lang-en">Location</span>
+                <span class="lang-inline lang-zh">地点</span>
+            </span>
+            <p class="lang-en">{{ site.data.profile.location.en }}</p>
+            <p class="lang-zh">{{ site.data.profile.location.zh }}</p>
+        </div>
+
+        <div class="meta-row">
+            <span class="meta-label">
+                <span class="lang-inline lang-en">Email</span>
+                <span class="lang-inline lang-zh">邮箱</span>
+            </span>
+            <p><a href="mailto:{{ site.data.profile.email }}">{{ site.data.profile.email }}</a></p>
+        </div>
+
+        <div class="meta-row">
+            <span class="meta-label">
+                <span class="lang-inline lang-en">Interests</span>
+                <span class="lang-inline lang-zh">方向</span>
+            </span>
+            <div class="tag-cloud">
+                {% for item in site.data.profile.focus_areas %}
+                <span class="tag-chip lang-en">{{ item.en }}</span>
+                <span class="tag-chip lang-zh">{{ item.zh }}</span>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <nav class="sidebar-nav" aria-label="Primary">
+        {% for item in site.data.navigation.sidebar_nav %}
+        <a href="{{ '/' | relative_url }}#{{ item.target }}" class="sidebar-nav-link" data-open-tab="{{ item.target }}">
+            <span class="lang-inline lang-en">{{ item.label_en }}</span>
+            <span class="lang-inline lang-zh">{{ item.label_zh }}</span>
+        </a>
+        {% endfor %}
+    </nav>
+
+    <div class="sidebar-metrics">
+        {% for metric in site.data.profile.metrics %}
+        <article class="metric-card">
+            <p class="metric-value">{{ metric.value }}</p>
+            <p class="metric-label lang-en">{{ metric.label_en }}</p>
+            <p class="metric-label lang-zh">{{ metric.label_zh }}</p>
+        </article>
+        {% endfor %}
+    </div>
+
+    <div class="sidebar-links">
+        {% for link in site.data.profile.links %}
+        <a href="{{ link.url }}" class="sidebar-link">
+            <span class="lang-inline lang-en">{{ link.label_en }}</span>
+            <span class="lang-inline lang-zh">{{ link.label_zh }}</span>
+        </a>
+        {% endfor %}
+    </div>
+</div>

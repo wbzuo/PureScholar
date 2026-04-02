@@ -1,0 +1,23 @@
+{% assign styles = site.data.styles | default: empty %}
+{% if styles != empty %}
+<div class="utility-group utility-group-style">
+    <span class="utility-label">
+        <span class="lang-inline lang-en">Style</span>
+        <span class="lang-inline lang-zh">风格</span>
+    </span>
+
+    <div class="style-switcher" role="toolbar" aria-label="Site style picker">
+        {% for style in styles %}
+        <button
+            type="button"
+            class="ctrl-btn style-btn"
+            data-style-value="{{ style.id }}"
+            aria-pressed="false"
+            title="{{ style.description_en }}">
+            <span class="lang-inline lang-en">{{ style.label_en }}</span>
+            <span class="lang-inline lang-zh">{{ style.label_zh }}</span>
+        </button>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}

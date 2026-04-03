@@ -1,7 +1,6 @@
 const PREF_KEYS = {
     language: "pref-lang",
-    theme: "pref-theme",
-    siteStyle: "pref-site-style"
+    theme: "pref-theme"
 };
 
 function readPreference(key) {
@@ -21,10 +20,12 @@ function writePreference(key, value) {
 }
 
 function applyLanguage(language) {
-    const nextLanguage = language === "zh" ? "zh" : "en";
-    const isZh = nextLanguage === "zh";
+    const isZh = language === "zh";
     const langToggle = document.getElementById("lang-toggle");
 
+    // Keep both the data-lang attribute (for FOUC prevention on next load)
+    // and the body class (used by existing CSS rules).
+    document.documentElement.setAttribute("data-lang", isZh ? "zh" : "en");
     document.body.classList.toggle("zh-active", isZh);
     document.documentElement.lang = isZh ? "zh-CN" : "en";
 
@@ -39,13 +40,17 @@ function applyLanguage(language) {
 
 function applyTheme(theme) {
     const nextTheme = theme === "dark" ? "dark" : "light";
-    const themeIcon = document.getElementById("theme-icon");
     const themeToggle = document.getElementById("theme-toggle");
+    const themeIcon = document.getElementById("theme-icon");
 
     document.documentElement.setAttribute("data-theme", nextTheme);
 
     if (themeIcon) {
-        themeIcon.innerText = nextTheme === "dark" ? "Dark" : "Light";
+        const enSpan = themeIcon.querySelector(".lang-en");
+        const zhSpan = themeIcon.querySelector(".lang-zh");
+        // Show what clicking will switch TO
+        if (enSpan) enSpan.textContent = nextTheme === "dark" ? "Light" : "Dark";
+        if (zhSpan) zhSpan.textContent = nextTheme === "dark" ? "亮色" : "深色";
     }
 
     if (themeToggle) {
@@ -57,25 +62,9 @@ function applyTheme(theme) {
     }
 }
 
-function applySiteStyle(style) {
-    const styleButtons = Array.from(document.querySelectorAll("[data-style-value]"));
-    const validStyles = styleButtons.map((button) => button.dataset.styleValue);
-    const defaultStyle = document.documentElement.dataset.defaultStyle || validStyles[0] || "academic";
-    const nextStyle = validStyles.includes(style) ? style : defaultStyle;
-
-    document.documentElement.setAttribute("data-site-style", nextStyle);
-
-    styleButtons.forEach((button) => {
-        const isActive = button.dataset.styleValue === nextStyle;
-        button.classList.toggle("is-active", isActive);
-        button.setAttribute("aria-pressed", String(isActive));
-    });
-}
-
 function initializePreferenceControls() {
     const langToggle = document.getElementById("lang-toggle");
     const themeToggle = document.getElementById("theme-toggle");
-    const styleButtons = Array.from(document.querySelectorAll("[data-style-value]"));
 
     if (langToggle) {
         langToggle.addEventListener("click", () => {
@@ -88,19 +77,11 @@ function initializePreferenceControls() {
     if (themeToggle) {
         themeToggle.addEventListener("click", () => {
             const currentTheme = document.documentElement.getAttribute("data-theme");
-            const nextTheme = currentTheme === "dark" ? "light" : "dark";
+            const nextTheme = currentTheme === "light" ? "dark" : "light";
             writePreference(PREF_KEYS.theme, nextTheme);
             applyTheme(nextTheme);
         });
     }
-
-    styleButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-            const nextStyle = button.dataset.styleValue;
-            writePreference(PREF_KEYS.siteStyle, nextStyle);
-            applySiteStyle(nextStyle);
-        });
-    });
 }
 
 function initializeTabs() {
@@ -148,11 +129,12 @@ function initializeTabs() {
         });
     });
 
+    // Fix: sync hash when using [data-open-tab] internal links
     document.querySelectorAll("[data-open-tab]").forEach((link) => {
         link.addEventListener("click", () => {
             const target = link.dataset.openTab;
             if (validTabIds.has(target)) {
-                activateTab(target);
+                activateTab(target, true);
             }
         });
     });
@@ -203,15 +185,13 @@ function initializeFilters() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     const savedLanguage = readPreference(PREF_KEYS.language) || "en";
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     const savedTheme = readPreference(PREF_KEYS.theme) || (prefersDark ? "dark" : "light");
-    const savedSiteStyle = readPreference(PREF_KEYS.siteStyle) || document.documentElement.dataset.defaultStyle || "academic";
 
     initializePreferenceControls();
     applyLanguage(savedLanguage);
     applyTheme(savedTheme);
-    applySiteStyle(savedSiteStyle);
     initializeTabs();
     initializeFilters();
 });
